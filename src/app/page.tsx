@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { bp } from "@/lib/utils";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 import { MagicCard } from "@/components/magicui/magic-card";
@@ -102,12 +101,9 @@ export default function Home() {
               </Link>
             ))}
           </div>
-          <div className="flex items-center gap-2">
-            <ThemeToggle />
-            <Button asChild variant="outline">
-              <Link href="#contact">Book Now</Link>
-            </Button>
-          </div>
+          <Button asChild variant="outline">
+            <Link href="#contact">Book Now</Link>
+          </Button>
         </nav>
       </header>
 
