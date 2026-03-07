@@ -102,7 +102,7 @@ export function SiteNavbar() {
           menuOpen ? "max-h-[500px] pb-4" : "max-h-0",
         )}
       >
-        <div className="mx-4 rounded-2xl border border-zinc-200/70 bg-white/90 p-4 shadow-sm backdrop-blur dark:border-white/15 dark:bg-black/70 sm:mx-6">
+        <div className="mx-4 rounded-2xl border border-zinc-200/70 bg-white/90 p-4 shadow-sm backdrop-blur sm:mx-6">
           <div className="flex flex-col gap-3">
             {navLinks.map((item) => {
               const active = isActive(pathname, item.href);
@@ -111,7 +111,7 @@ export function SiteNavbar() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "rounded-lg px-2 py-1.5 text-sm text-zinc-700 transition hover:text-[#FF3131] dark:text-zinc-200",
+                    "rounded-lg px-2 py-1.5 text-sm text-zinc-700 transition hover:text-[#FF3131]",
                     active && "bg-[#FF3131]/10 text-[#FF3131]",
                   )}
                 >

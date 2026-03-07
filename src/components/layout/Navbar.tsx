@@ -39,7 +39,7 @@ export function Navbar() {
             alt="Algarve SimRacing"
             width={108}
             height={40}
-            className="h-10 w-auto dark:block hidden"
+            className="h-10 w-auto hidden"
             priority
           />
           <Image
@@ -47,7 +47,7 @@ export function Navbar() {
             alt="Algarve SimRacing"
             width={108}
             height={40}
-            className="h-10 w-auto dark:hidden block"
+            className="h-10 w-auto block"
             priority
           />
         </Link>
@@ -61,7 +61,7 @@ export function Navbar() {
                 className={`text-sm font-medium transition-colors hover:text-[#FF3131] ${
                   isActive(l.href)
                     ? "text-[#FF3131] border-b-2 border-[#FF3131] pb-0.5"
-                    : "text-zinc-600 dark:text-white/75"
+                    : "text-zinc-600"
                 }`}
               >
                 {l.label}
@@ -80,7 +80,7 @@ export function Navbar() {
           </Link>
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden p-2 text-zinc-600 dark:text-white/75"
+            className="md:hidden p-2 text-zinc-600"
             aria-label="Toggle menu"
           >
             {open ? <X size={22} /> : <Menu size={22} />}
@@ -98,7 +98,7 @@ export function Navbar() {
                   href={l.href}
                   onClick={() => setOpen(false)}
                   className={`block text-base font-medium transition-colors hover:text-[#FF3131] ${
-                    isActive(l.href) ? "text-[#FF3131]" : "text-zinc-600 dark:text-white/75"
+                    isActive(l.href) ? "text-[#FF3131]" : "text-zinc-600"
                   }`}
                 >
                   {l.label}

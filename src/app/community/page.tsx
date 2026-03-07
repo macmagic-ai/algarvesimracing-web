@@ -27,7 +27,7 @@ export default function CommunityPage() {
   return (
     <div className="mx-auto w-full max-w-6xl px-4 py-12 sm:px-6">
       <h1 className="font-heading text-5xl font-bold sm:text-6xl">Community</h1>
-      <p className="mt-4 max-w-3xl text-zinc-700 dark:text-zinc-300">
+      <p className="mt-4 max-w-3xl text-zinc-700">
         Live moments from sessions, events, and driver progress at Algarve SimRacing.
       </p>
 
@@ -39,14 +39,14 @@ export default function CommunityPage() {
             Training with us
           </span>
         </div>
-        <p className="mt-3 text-zinc-600 dark:text-zinc-400 max-w-2xl">
+        <p className="mt-3 text-zinc-600 max-w-2xl">
           Professional racers trust Algarve SimRacing for their simulator preparation.
         </p>
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {proDrivers.map((driver) => (
             <div
               key={driver.name}
-              className="group relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-white/10 bg-white dark:bg-white/[0.03]"
+              className="group relative overflow-hidden rounded-2xl border border-zinc-200 bg-white"
             >
               <div className="aspect-[4/3] overflow-hidden">
                 <Image
@@ -59,14 +59,14 @@ export default function CommunityPage() {
               </div>
               <div className="p-5">
                 <div className="flex items-center gap-2">
-                  <h3 className="font-heading text-xl font-bold text-zinc-900 dark:text-white">
+                  <h3 className="font-heading text-xl font-bold text-zinc-900">
                     {driver.name}
                   </h3>
                   <span className="rounded-full bg-[#FF3131]/10 px-2 py-0.5 text-xs font-medium text-[#FF3131]">
                     {driver.title}
                   </span>
                 </div>
-                <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                <p className="mt-2 text-sm text-zinc-600">
                   &ldquo;{driver.quote}&rdquo;
                 </p>
                 <div className="mt-3 flex items-center gap-2">
@@ -105,7 +105,7 @@ export default function CommunityPage() {
           {instagramPosts.map((post) => (
             <article
               key={post.id}
-              className="overflow-hidden rounded-2xl border border-zinc-200/70 dark:border-white/10 bg-white/80 dark:bg-white/[0.03]"
+              className="overflow-hidden rounded-2xl border border-zinc-200/70 bg-white/80"
             >
               <a href={post.url} target="_blank" rel="noopener noreferrer">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -116,7 +116,7 @@ export default function CommunityPage() {
                 />
               </a>
               <div className="space-y-2 p-4">
-                <p className="line-clamp-3 text-sm text-zinc-700 dark:text-zinc-300">{post.caption}</p>
+                <p className="line-clamp-3 text-sm text-zinc-700">{post.caption}</p>
                 <p className="text-xs uppercase tracking-wider text-zinc-500">
                   {post.date}
                 </p>

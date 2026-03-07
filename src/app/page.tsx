@@ -83,24 +83,24 @@ export default function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#FF3131]">
               Portimão, Portugal
             </p>
-            <h1 className="mt-4 font-heading text-5xl font-bold leading-[1.0] text-zinc-900 dark:text-white sm:text-6xl md:text-7xl">
+            <h1 className="mt-4 font-heading text-5xl font-bold leading-[1.0] text-zinc-900 sm:text-6xl md:text-7xl">
               Portugal&apos;s Premier<br />
               <AnimatedGradientText>Sim Racing</AnimatedGradientText><br />
               Experience
             </h1>
-            <p className="mt-5 max-w-lg text-base text-zinc-600 dark:text-zinc-300 sm:text-lg">
+            <p className="mt-5 max-w-lg text-base text-zinc-600 sm:text-lg">
               Where Virtual Meets Reality. Pro-grade simulators, elite hardware, and real driver coaching — 5 minutes from Autódromo Internacional do Algarve.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/pricing" className="rounded-lg bg-[#FF3131] px-6 py-3 text-sm font-semibold text-white hover:bg-[#cc0000] transition-colors">
                 Book a Session
               </Link>
-              <Link href="/simulators" className="rounded-lg border border-zinc-300 dark:border-white/20 px-6 py-3 text-sm font-semibold text-zinc-700 dark:text-white/80 hover:border-[#FF3131] hover:text-[#FF3131] transition-colors">
+              <Link href="/simulators" className="rounded-lg border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-700 hover:border-[#FF3131] hover:text-[#FF3131] transition-colors">
                 View Simulators
               </Link>
             </div>
             {/* Stats row */}
-            <div className="mt-10 flex flex-wrap gap-8 border-t border-zinc-200 dark:border-white/10 pt-6">
+            <div className="mt-10 flex flex-wrap gap-8 border-t border-zinc-200 pt-6">
               {[
                 { v: "2", l: "Pro simulators" },
                 { v: "RTX 5090", l: "GPU power" },
@@ -109,7 +109,7 @@ export default function HomePage() {
               ].map((s) => (
                 <div key={s.v}>
                   <p className="font-heading text-xl font-bold text-[#FF3131]">{s.v}</p>
-                  <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">{s.l}</p>
+                  <p className="text-xs text-zinc-500 mt-0.5">{s.l}</p>
                 </div>
               ))}
             </div>
@@ -151,11 +151,11 @@ export default function HomePage() {
 
       {/* ── Services with images ───────────────────────────── */}
       <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
-        <h2 className="font-heading text-3xl font-bold text-zinc-900 dark:text-white sm:text-4xl">What We Offer</h2>
-        <p className="mt-2 text-zinc-500 dark:text-zinc-400">Built for racers, creators, and teams.</p>
+        <h2 className="font-heading text-3xl font-bold text-zinc-900 sm:text-4xl">What We Offer</h2>
+        <p className="mt-2 text-zinc-500">Built for racers, creators, and teams.</p>
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((s) => (
-            <div key={s.title} className="rounded-xl border border-zinc-200 dark:border-white/10 overflow-hidden bg-white dark:bg-white/[0.03] hover:border-[#FF3131]/50 transition-colors group">
+            <div key={s.title} className="rounded-xl border border-zinc-200 overflow-hidden bg-white hover:border-[#FF3131]/50 transition-colors group">
               <div className="aspect-[4/3] overflow-hidden">
                 <Image
                   src={bp(s.img)}
@@ -167,8 +167,8 @@ export default function HomePage() {
               </div>
               <div className="p-4">
                 <p className="text-lg">{s.icon}</p>
-                <h3 className="mt-1 font-heading font-semibold text-zinc-900 dark:text-white">{s.title}</h3>
-                <p className="mt-1.5 text-sm text-zinc-500 dark:text-zinc-400">{s.desc}</p>
+                <h3 className="mt-1 font-heading font-semibold text-zinc-900">{s.title}</h3>
+                <p className="mt-1.5 text-sm text-zinc-500">{s.desc}</p>
               </div>
             </div>
           ))}
@@ -177,7 +177,7 @@ export default function HomePage() {
 
       {/* ── Pro Driver Highlight ─────────────────────────── */}
       <section className="mx-auto w-full max-w-6xl px-4 sm:px-6 py-8">
-        <div className="rounded-2xl border border-zinc-200 dark:border-white/10 bg-zinc-50 dark:bg-white/[0.02] overflow-hidden">
+        <div className="rounded-2xl border border-zinc-200 bg-zinc-50 overflow-hidden">
           <div className="grid md:grid-cols-2 gap-6 items-center">
             <div className="aspect-[4/3] md:aspect-auto md:h-full overflow-hidden">
               <Image
@@ -193,15 +193,15 @@ export default function HomePage() {
                 <span className="rounded-full bg-[#FF3131] px-3 py-1 text-xs font-semibold text-white uppercase tracking-wide">
                   Featured Driver
                 </span>
-                <span className="text-xs text-zinc-500 dark:text-zinc-400 uppercase tracking-wide">
+                <span className="text-xs text-zinc-500 uppercase tracking-wide">
                   Pro Training
                 </span>
               </div>
-              <h2 className="font-heading text-2xl md:text-3xl font-bold text-zinc-900 dark:text-white">
+              <h2 className="font-heading text-2xl md:text-3xl font-bold text-zinc-900">
                 Trusted by Champions
               </h2>
-              <p className="mt-3 text-zinc-600 dark:text-zinc-400">
-                <strong className="text-zinc-900 dark:text-white">Noah Killion</strong>, AU4 Champion, puts in the work at Algarve SimRacing for the Formula Winter Series. Professional racers trust our simulators for their race preparation.
+              <p className="mt-3 text-zinc-600">
+                <strong className="text-zinc-900">Noah Killion</strong>, AU4 Champion, puts in the work at Algarve SimRacing for the Formula Winter Series. Professional racers trust our simulators for their race preparation.
               </p>
               <div className="mt-5 flex flex-wrap items-center gap-3">
                 <Link
@@ -210,7 +210,7 @@ export default function HomePage() {
                 >
                   Meet Our Drivers
                 </Link>
-                <span className="text-xs text-zinc-500 dark:text-zinc-400">
+                <span className="text-xs text-zinc-500">
                   #formula4 #formulawinterseries
                 </span>
               </div>
@@ -242,8 +242,8 @@ export default function HomePage() {
 
       {/* ── Sim preview cards ──────────────────────────────── */}
       <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
-        <h2 className="font-heading text-3xl font-bold text-zinc-900 dark:text-white sm:text-4xl">The Simulators</h2>
-        <p className="mt-2 text-zinc-500 dark:text-zinc-400">Two elite rigs. Serious hardware.</p>
+        <h2 className="font-heading text-3xl font-bold text-zinc-900 sm:text-4xl">The Simulators</h2>
+        <p className="mt-2 text-zinc-500">Two elite rigs. Serious hardware.</p>
         <div className="mt-8 grid gap-5 md:grid-cols-2">
           <Link href="/simulators" className="group block rounded-2xl overflow-hidden relative">
             <Image src={bp("/assets/11-1536x1152-1.jpg")} alt="Simulator 1 – Triple OLED" width={800} height={500} className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />

@@ -32,7 +32,7 @@ export function DriverStories() {
                 />
               </div>
             </div>
-            <span className="text-xs font-medium text-zinc-600 dark:text-white/70 max-w-[72px] truncate">
+            <span className="text-xs font-medium text-zinc-600 max-w-[72px] truncate">
               {s.name}
             </span>
           </button>
@@ -77,8 +77,8 @@ export function DriverStories() {
             </button>
             {/* Quote */}
             <div className="p-5">
-              <p className="text-base text-zinc-700 dark:text-white/85 leading-relaxed">"{story.quote}"</p>
-              <p className="mt-3 text-xs text-zinc-400 dark:text-white/40">— {story.name}, Algarve SimRacing</p>
+              <p className="text-base text-zinc-700 leading-relaxed">"{story.quote}"</p>
+              <p className="mt-3 text-xs text-zinc-400">— {story.name}, Algarve SimRacing</p>
             </div>
           </div>
         </div>

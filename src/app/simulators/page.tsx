@@ -25,7 +25,7 @@ export default function SimulatorsPage() {
   return (
     <div className="mx-auto w-full max-w-6xl px-4 py-12 sm:px-6">
       <h1 className="font-heading text-5xl font-bold sm:text-6xl">Simulators</h1>
-      <p className="mt-4 max-w-3xl text-zinc-700 dark:text-zinc-300">
+      <p className="mt-4 max-w-3xl text-zinc-700">
         Two elite rigs engineered for immersion, precision, and real driver development.
       </p>
 
@@ -41,7 +41,7 @@ export default function SimulatorsPage() {
           <h2 className="font-heading text-3xl font-semibold text-[#FF3131]">
             Simulator 1: Triple Screen 42&quot; OLED
           </h2>
-          <ul className="space-y-2 text-sm text-zinc-700 dark:text-zinc-200">
+          <ul className="space-y-2 text-sm text-zinc-700">
             <li>Sim-Lab P1-X frame + Speed1 racing seat</li>
             <li>Simucube 2 Pro direct drive wheelbase</li>
             <li>Simucube Active Pedal brake + Simucube throttle</li>
@@ -63,7 +63,7 @@ export default function SimulatorsPage() {
           <h2 className="font-heading text-3xl font-semibold text-[#FF3131]">
             Simulator 2: Samsung G9 49&quot; or VR
           </h2>
-          <ul className="space-y-2 text-sm text-zinc-700 dark:text-zinc-200">
+          <ul className="space-y-2 text-sm text-zinc-700">
             <li>Custom-built frame + professional race seat</li>
             <li>Simucube 2 Pro direct drive</li>
             <li>Simucube Active pedal brake + Simucube throttle</li>

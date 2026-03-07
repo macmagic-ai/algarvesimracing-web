@@ -13,7 +13,6 @@ export function AnimatedGradientText({
     <span
       className={cn(
         "inline-block bg-[length:200%_auto] bg-clip-text text-transparent animate-[gradient-pan_5s_linear_infinite]",
-        "dark:bg-[linear-gradient(90deg,#ffffff_0%,#FF3131_35%,#ff8a00_70%,#ffffff_100%)]",
         "bg-[linear-gradient(90deg,#1a1a1a_0%,#cc0000_35%,#cc5500_70%,#1a1a1a_100%)]",
         className,
       )}

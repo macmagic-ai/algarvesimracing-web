@@ -58,19 +58,19 @@ const faqs = [
 function FaqItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border-b border-zinc-200 dark:border-white/10">
+    <div className="border-b border-zinc-200">
       <button
         onClick={() => setOpen(!open)}
         className="flex w-full items-center justify-between gap-4 py-5 text-left"
       >
-        <span className="font-medium text-zinc-900 dark:text-white">{q}</span>
+        <span className="font-medium text-zinc-900">{q}</span>
         <ChevronDown
           size={18}
           className={`shrink-0 text-[#FF3131] transition-transform duration-200 ${open ? "rotate-180" : ""}`}
         />
       </button>
       {open && (
-        <p className="pb-5 text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">{a}</p>
+        <p className="pb-5 text-sm text-zinc-600 leading-relaxed">{a}</p>
       )}
     </div>
   );
@@ -79,8 +79,8 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 export default function FaqPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
-      <h1 className="font-heading text-4xl font-bold text-zinc-900 dark:text-white sm:text-5xl">FAQ</h1>
-      <p className="mt-4 text-zinc-500 dark:text-zinc-400">
+      <h1 className="font-heading text-4xl font-bold text-zinc-900 sm:text-5xl">FAQ</h1>
+      <p className="mt-4 text-zinc-500">
         Everything you need to know before booking your session at Algarve SimRacing.
       </p>
 

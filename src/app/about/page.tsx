@@ -33,7 +33,7 @@ export default function AboutPage() {
             className="w-full rounded-xl object-cover"
             priority
           />
-          <p className="text-zinc-700 dark:text-zinc-200">
+          <p className="text-zinc-700">
             Founded by <strong>Gabor and Jussi</strong>, Algarve SimRacing came from real racing
             life, not just sim enthusiasm. They train, compete, and apply that same mentality to
             every session at ASR.
@@ -44,7 +44,7 @@ export default function AboutPage() {
           <blockquote className="font-heading text-3xl font-semibold leading-tight text-[#FF3131]">
             &quot;For us, sim racing isn&apos;t just a game - it&apos;s an essential tool.&quot;
           </blockquote>
-          <p className="text-zinc-700 dark:text-zinc-300">
+          <p className="text-zinc-700">
             Their mission is simple: bring authentic, high-performance sim driving to the Algarve
             for drivers, enthusiasts, teams, and creators.
           </p>
@@ -74,7 +74,7 @@ export default function AboutPage() {
           {trackRecord.map((item) => (
             <div
               key={item}
-              className="rounded-xl border border-zinc-200/70 bg-white/70 px-4 py-3 text-sm text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-200"
+              className="rounded-xl border border-zinc-200/70 bg-white/70 px-4 py-3 text-sm text-zinc-700"
             >
               {item}
             </div>

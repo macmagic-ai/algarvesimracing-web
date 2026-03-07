@@ -55,8 +55,8 @@ export default function GalleryPage() {
       {/* Header */}
       <div className="flex items-end justify-between gap-4 flex-wrap mb-10">
         <div>
-          <h1 className="font-heading text-4xl font-bold text-zinc-900 dark:text-white sm:text-5xl">Gallery</h1>
-          <p className="mt-3 text-zinc-500 dark:text-zinc-400 max-w-xl">
+          <h1 className="font-heading text-4xl font-bold text-zinc-900 sm:text-5xl">Gallery</h1>
+          <p className="mt-3 text-zinc-500 max-w-xl">
             Inside the rigs, on the track, and behind the scenes at Algarve SimRacing.
           </p>
         </div>
@@ -64,7 +64,7 @@ export default function GalleryPage() {
           href="https://www.instagram.com/algarvesimracing/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-lg border border-zinc-200 dark:border-white/15 px-4 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-200 hover:border-[#FF3131] hover:text-[#FF3131] transition-colors"
+          className="inline-flex items-center gap-2 rounded-lg border border-zinc-200 px-4 py-2 text-sm font-medium text-zinc-700 hover:border-[#FF3131] hover:text-[#FF3131] transition-colors"
         >
           <Instagram size={15} />
           More on Instagram
@@ -77,7 +77,7 @@ export default function GalleryPage() {
           <button
             key={i}
             onClick={() => openModal(photos.map(photo => ({ src: photo.src, alt: photo.alt })), i)}
-            className={`relative overflow-hidden rounded-xl bg-zinc-100 dark:bg-white/5 ${p.span} cursor-pointer group`}
+            className={`relative overflow-hidden rounded-xl bg-zinc-100 ${p.span} cursor-pointer group`}
           >
             <Image
               src={bp(p.src)}
@@ -93,8 +93,8 @@ export default function GalleryPage() {
 
       {/* Track photos section */}
       <div className="mt-16">
-        <h2 className="font-heading text-2xl font-bold text-zinc-900 dark:text-white mb-6">Real Racing</h2>
-        <p className="text-zinc-500 dark:text-zinc-400 mb-8 max-w-2xl">
+        <h2 className="font-heading text-2xl font-bold text-zinc-900 mb-6">Real Racing</h2>
+        <p className="text-zinc-500 mb-8 max-w-2xl">
           Behind every great sim setup is real track experience. Founders Gabor and Jussi race competitively at Kartódromo Internacional do Algarve and on circuits across Europe.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
@@ -118,7 +118,7 @@ export default function GalleryPage() {
 
       {/* CTA */}
       <div className="mt-14 text-center">
-        <p className="text-zinc-500 dark:text-zinc-400 mb-4">Want to be in our gallery? Come race.</p>
+        <p className="text-zinc-500 mb-4">Want to be in our gallery? Come race.</p>
         <Link
           href="/contact"
           className="inline-flex rounded-lg bg-[#FF3131] px-8 py-3.5 text-sm font-semibold text-white hover:bg-[#cc0000] transition-colors"
