@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://macmagic-ai.github.io/algarvesimracing-web/sitemap.xml
