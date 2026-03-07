@@ -8,7 +8,6 @@ import { Menu, X } from "lucide-react";
 
 import { bp, cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import { navLinks } from "@/data/site";
 
 const isActive = (pathname: string, href: string) => {
@@ -37,7 +36,7 @@ export function SiteNavbar() {
       className={cn(
         "sticky top-0 z-50 border-b transition-all duration-300",
         scrolled
-          ? "border-zinc-200/70 bg-white/85 backdrop-blur-xl dark:border-white/15 dark:bg-black/65"
+          ? "border-zinc-200/70 bg-white/85 backdrop-blur-xl"
           : "border-transparent bg-transparent",
       )}
     >
@@ -47,19 +46,11 @@ export function SiteNavbar() {
       >
         <Link href="/" className="flex items-center" aria-label="Algarve SimRacing home">
           <Image
-            src={bp("/assets/asr-logo-color.svg")}
+            src={bp("/assets/asr-logo-nav.svg")}
             alt="Algarve SimRacing logo"
-            width={140}
-            height={42}
-            className="h-10 w-auto dark:hidden"
-            priority
-          />
-          <Image
-            src={bp("/assets/asr-logo-white.svg")}
-            alt="Algarve SimRacing logo"
-            width={140}
-            height={42}
-            className="hidden h-auto w-auto dark:block"
+            width={180}
+            height={54}
+            className="h-12 w-auto"
             priority
           />
         </Link>
@@ -72,7 +63,7 @@ export function SiteNavbar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "relative pb-2 text-zinc-700 transition hover:text-[#FF3131] dark:text-zinc-200",
+                  "relative pb-2 text-zinc-700 transition hover:text-[#FF3131]",
                   active && "text-[#FF3131]",
                 )}
               >
@@ -89,7 +80,6 @@ export function SiteNavbar() {
         </div>
 
         <div className="hidden items-center md:flex gap-4">
-          <ThemeToggle />
           <Button asChild>
             <Link href="/pricing#booking">Book Now</Link>
           </Button>
@@ -97,7 +87,7 @@ export function SiteNavbar() {
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-300/70 text-zinc-700 dark:border-white/20 dark:text-zinc-200 md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-300/70 text-zinc-700 md:hidden"
           aria-expanded={menuOpen}
           aria-label="Toggle menu"
           onClick={() => setMenuOpen((prev) => !prev)}
@@ -109,7 +99,7 @@ export function SiteNavbar() {
       <div
         className={cn(
           "mx-auto max-w-6xl overflow-hidden transition-all duration-300 md:hidden",
-          menuOpen ? "max-h-96 pb-4" : "max-h-0",
+          menuOpen ? "max-h-[500px] pb-4" : "max-h-0",
         )}
       >
         <div className="mx-4 rounded-2xl border border-zinc-200/70 bg-white/90 p-4 shadow-sm backdrop-blur dark:border-white/15 dark:bg-black/70 sm:mx-6">

@@ -64,7 +64,10 @@ export const metadata: Metadata = {
     images: ["/algarvesimracing-web/assets/008-900x900-1.jpg"],
   },
   icons: {
-    icon: "/algarvesimracing-web/assets/ASR_favicon-32.png",
+    icon: [
+      { url: "/algarvesimracing-web/assets/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+    ],
+    apple: "/algarvesimracing-web/assets/favicon-96x96.png",
   },
 };
 

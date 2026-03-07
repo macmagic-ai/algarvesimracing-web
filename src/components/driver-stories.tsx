@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import { X } from "lucide-react";
 
 import type { DriverStory } from "@/data/driver-stories";
+import { bp } from "@/lib/utils";
 
 export function DriverStories({ stories }: { stories: DriverStory[] }) {
   const [activeStory, setActiveStory] = useState<DriverStory | null>(null);
@@ -20,12 +20,11 @@ export function DriverStories({ stories }: { stories: DriverStory[] }) {
             onClick={() => setActiveStory(story)}
           >
             <div className="mx-auto h-[74px] w-[74px] rounded-full bg-gradient-to-tr from-[#FF3131] to-[#FF8A00] p-[2px]">
-              <div className="h-full w-full overflow-hidden rounded-full border-2 border-white bg-black dark:border-zinc-900">
-                <Image
-                  src={story.image}
+              <div className="h-full w-full overflow-hidden rounded-full border-2 border-white bg-black">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={bp(story.image)}
                   alt={`${story.name} driver story`}
-                  width={160}
-                  height={160}
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
@@ -50,11 +49,10 @@ export function DriverStories({ stories }: { stories: DriverStory[] }) {
             >
               <X size={16} />
             </button>
-            <Image
-              src={activeStory.image}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={bp(activeStory.image)}
               alt={`${activeStory.name} story`}
-              width={900}
-              height={900}
               className="h-[360px] w-full object-cover"
             />
             <div className="space-y-2 p-4">

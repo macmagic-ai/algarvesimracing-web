@@ -5,7 +5,7 @@ import { bp } from "@/lib/utils";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Portugal's Premier Sim Racing Experience",
   description:
     "Algarve SimRacing in Portimão — professional simulator rentals, coaching, private events and advanced driver prep near Autódromo Internacional do Algarve.",
 };
@@ -149,8 +149,8 @@ export default function HomePage() {
       </section>
 
       {/* ── Full-width photo strip ─────────────────────────── */}
-      <section className="w-full py-4">
-        <div className="flex gap-3 overflow-x-auto px-4 sm:px-6 scrollbar-none">
+      <section className="mx-auto w-full max-w-6xl px-4 sm:px-6 py-4">
+        <div className="flex gap-3 overflow-x-auto scrollbar-none pb-2">
           {[
             { img: "/assets/13-1024x714-1.jpg", alt: "McLaren wheel cockpit" },
             { img: "/assets/12-1024x768-1.jpg", alt: "Driver in action" },

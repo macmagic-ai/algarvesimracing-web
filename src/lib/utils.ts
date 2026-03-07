@@ -6,5 +6,4 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 /** Prepend the GitHub Pages basePath to any public/ asset path. */
-export const bp = (path: string) =>
-  `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}`;
+export const bp = (path: string) => `/algarvesimracing-web${path}`;
