@@ -8,6 +8,7 @@ import { Menu, X } from "lucide-react";
 
 import { bp, cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { navLinks } from "@/data/site";
 
 const isActive = (pathname: string, href: string) => {
@@ -46,19 +47,19 @@ export function SiteNavbar() {
       >
         <Link href="/" className="flex items-center" aria-label="Algarve SimRacing home">
           <Image
-            src={bp("/assets/ASR_cor-1.png")}
+            src={bp("/assets/asr-logo-color.svg")}
             alt="Algarve SimRacing logo"
             width={140}
             height={42}
-            className="h-auto w-[120px] dark:hidden"
+            className="h-10 w-auto dark:hidden"
             priority
           />
           <Image
-            src={bp("/assets/ASR_branco-1.png")}
+            src={bp("/assets/asr-logo-white.svg")}
             alt="Algarve SimRacing logo"
             width={140}
             height={42}
-            className="hidden h-auto w-[120px] dark:block"
+            className="hidden h-auto w-auto dark:block"
             priority
           />
         </Link>
@@ -87,7 +88,8 @@ export function SiteNavbar() {
           })}
         </div>
 
-        <div className="hidden items-center md:flex">
+        <div className="hidden items-center md:flex gap-4">
+          <ThemeToggle />
           <Button asChild>
             <Link href="/pricing#booking">Book Now</Link>
           </Button>

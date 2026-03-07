@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { bp } from "@/lib/utils";
+import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -45,7 +46,8 @@ export default function HomePage() {
     <div className="relative overflow-x-hidden">
 
       {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="relative">
+      <section className="relative overflow-hidden">
+        <div className="hero-grid absolute inset-0" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_25%,rgba(255,49,49,0.13),transparent_45%)]" />
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:items-center lg:py-20">
 
@@ -56,7 +58,7 @@ export default function HomePage() {
             </p>
             <h1 className="mt-4 font-heading text-5xl font-bold leading-[1.0] text-zinc-900 dark:text-white sm:text-6xl md:text-7xl">
               Portugal&apos;s Premier<br />
-              <span className="text-[#FF3131]">Sim Racing</span><br />
+              <AnimatedGradientText>Sim Racing</AnimatedGradientText><br />
               Experience
             </h1>
             <p className="mt-5 max-w-lg text-base text-zinc-600 dark:text-zinc-300 sm:text-lg">

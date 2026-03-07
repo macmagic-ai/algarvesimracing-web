@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Instagram, Phone, Mail, MapPin } from "lucide-react";
 import { bp } from "@/lib/utils";
+import { navLinks } from "@/data/site";
 
 export function Footer() {
   return (
@@ -11,14 +12,14 @@ export function Footer() {
           {/* Brand */}
           <div>
             <Image
-              src={bp("/assets/ASR_branco-1.png")}
+              src={bp("/assets/asr-logo-white.svg")}
               alt="Algarve SimRacing"
               width={120}
               height={45}
               className="h-10 w-auto dark:block hidden"
             />
             <Image
-              src={bp("/assets/ASR_cor-1.png")}
+              src={bp("/assets/asr-logo-color.svg")}
               alt="Algarve SimRacing"
               width={120}
               height={45}
@@ -42,14 +43,7 @@ export function Footer() {
           <div>
             <h3 className="font-heading font-semibold text-sm uppercase tracking-widest text-zinc-400 dark:text-white/40 mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {[
-                { href: "/algarvesimracing-web/", label: "Home" },
-                { href: "/algarvesimracing-web/simulators", label: "Simulators" },
-                { href: "/algarvesimracing-web/pricing", label: "Pricing" },
-                { href: "/algarvesimracing-web/community", label: "Community" },
-                { href: "/algarvesimracing-web/about", label: "About" },
-                { href: "/algarvesimracing-web/contact", label: "Contact" },
-              ].map((l) => (
+              {navLinks.map((l) => (
                 <li key={l.href}>
                   <Link href={l.href} className="text-sm text-zinc-500 dark:text-white/55 hover:text-[#FF3131] transition-colors">
                     {l.label}
@@ -86,8 +80,8 @@ export function Footer() {
         <div className="mt-10 border-t border-[var(--border-color)] pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-zinc-400 dark:text-white/35">
           <p>© 2025 Algarve SimRacing. All rights reserved.</p>
           <div className="flex gap-4">
-            <Link href="/algarvesimracing-web/privacy" className="hover:text-[#FF3131] transition-colors">Privacy Policy</Link>
-            <Link href="/algarvesimracing-web/terms" className="hover:text-[#FF3131] transition-colors">Terms & Conditions</Link>
+            <Link href="/privacy" className="hover:text-[#FF3131] transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-[#FF3131] transition-colors">Terms & Conditions</Link>
           </div>
         </div>
       </div>

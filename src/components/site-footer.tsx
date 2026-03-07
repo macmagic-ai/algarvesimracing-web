@@ -11,14 +11,14 @@ export function SiteFooter() {
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-3">
         <div>
           <Image
-            src={bp("/assets/ASR_cor-1.png")}
+            src={bp("/assets/asr-logo-color.svg")}
             alt="Algarve SimRacing logo"
             width={150}
             height={42}
             className="h-auto w-[130px] dark:hidden"
           />
           <Image
-            src={bp("/assets/ASR_branco-1.png")}
+            src={bp("/assets/asr-logo-white.svg")}
             alt="Algarve SimRacing logo"
             width={150}
             height={42}

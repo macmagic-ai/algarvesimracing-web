@@ -63,72 +63,25 @@ export default function PricingPage() {
         </ul>
       </MagicCard>
 
-      <section id="booking" className="mt-12">
-        <h2 className="font-heading text-3xl font-semibold sm:text-4xl">Booking Request</h2>
-        <p className="mt-3 text-zinc-700 dark:text-zinc-300">
-          Send your preferred package and schedule. We will confirm availability quickly.
+      <section id="booking" className="mt-16 text-center">
+        <h2 className="font-heading text-3xl font-semibold sm:text-4xl">Ready to Book?</h2>
+        <p className="mt-4 text-zinc-600 dark:text-zinc-300 max-w-xl mx-auto">
+          We handle all bookings directly via WhatsApp to ensure you get the best rig and slot for your level.
         </p>
-        <form className="mt-6 grid gap-4 rounded-2xl border border-zinc-200/70 bg-white/70 p-5 dark:border-white/10 dark:bg-white/5 md:grid-cols-2">
-          <label className="flex flex-col gap-2 text-sm">
-            Name
-            <input
-              type="text"
-              name="name"
-              required
-              className="rounded-lg border border-zinc-300/80 bg-white px-3 py-2 text-zinc-900 dark:border-white/20 dark:bg-black/40 dark:text-white"
-            />
-          </label>
-          <label className="flex flex-col gap-2 text-sm">
-            Email
-            <input
-              type="email"
-              name="email"
-              required
-              className="rounded-lg border border-zinc-300/80 bg-white px-3 py-2 text-zinc-900 dark:border-white/20 dark:bg-black/40 dark:text-white"
-            />
-          </label>
-          <label className="flex flex-col gap-2 text-sm">
-            Phone
-            <input
-              type="tel"
-              name="phone"
-              className="rounded-lg border border-zinc-300/80 bg-white px-3 py-2 text-zinc-900 dark:border-white/20 dark:bg-black/40 dark:text-white"
-            />
-          </label>
-          <label className="flex flex-col gap-2 text-sm">
-            Package
-            <select
-              name="package"
-              className="rounded-lg border border-zinc-300/80 bg-white px-3 py-2 text-zinc-900 dark:border-white/20 dark:bg-black/40 dark:text-white"
-              defaultValue="Standard"
-            >
-              <option>Standard</option>
-              <option>Intermediate</option>
-              <option>Pro</option>
-              <option>Custom Event</option>
-            </select>
-          </label>
-          <label className="flex flex-col gap-2 text-sm md:col-span-2">
-            Message
-            <textarea
-              name="message"
-              rows={5}
-              placeholder="Preferred date/time, number of drivers, special requests."
-              className="rounded-lg border border-zinc-300/80 bg-white px-3 py-2 text-zinc-900 dark:border-white/20 dark:bg-black/40 dark:text-white"
-            />
-          </label>
-          <div className="md:col-span-2">
-            <button
-              type="submit"
-              className="rounded-full bg-[#FF3131] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#cc0000]"
-            >
-              Send Booking Request
-            </button>
-            <p className="mt-3 text-xs text-zinc-500 dark:text-zinc-400">
-              For immediate bookings call {contactDetails.phone} or use WhatsApp.
-            </p>
-          </div>
-        </form>
+        <div className="mt-8">
+          <a
+            href={contactDetails.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 rounded-full bg-[#25D366] px-8 py-4 text-lg font-bold text-white transition hover:bg-[#1ebe5a] shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95"
+          >
+            <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.847L.057 23.943l6.265-1.643A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.661-.498-5.195-1.37l-.372-.219-3.859 1.012.996-3.747-.241-.386A9.944 9.944 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Book via WhatsApp
+          </a>
+          <p className="mt-4 text-xs text-zinc-500 dark:text-zinc-400 font-medium tracking-tight uppercase">
+            Fast response · No account needed
+          </p>
+        </div>
       </section>
     </div>
   );

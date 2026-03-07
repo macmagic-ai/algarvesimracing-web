@@ -1,7 +1,9 @@
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/simulators", label: "Simulators" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/pricing", label: "Pricing" },
+  { href: "/faq", label: "FAQ" },
   { href: "/community", label: "Community" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
