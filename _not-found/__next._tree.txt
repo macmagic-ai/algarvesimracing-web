@@ -1,2 +1,0 @@
-:HL["/algarvesimracing-web/_next/static/chunks/f01c446babb7fa5b.css","style"]
-0:{"buildId":"TOS3NReRw1JeCRYBQx_uk","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

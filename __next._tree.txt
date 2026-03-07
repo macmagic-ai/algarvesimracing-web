@@ -1,6 +1,0 @@
-:HL["/algarvesimracing-web/_next/static/chunks/f01c446babb7fa5b.css","style"]
-:HL["/algarvesimracing-web/_next/static/media/0c89a48fa5027cee-s.p.4564287c.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/algarvesimracing-web/_next/static/media/3206eb66b875a5b3-s.p.e2b99870.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/algarvesimracing-web/_next/static/media/a079e02bba5bf7ab-s.p.7367eab7.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/algarvesimracing-web/_next/static/media/d23f31b94ad01e54-s.p.4b0b0c7e.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"buildId":"TOS3NReRw1JeCRYBQx_uk","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
