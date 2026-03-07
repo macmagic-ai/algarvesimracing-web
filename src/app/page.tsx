@@ -2,12 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { bp } from "@/lib/utils";
-import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 import { MagicCard } from "@/components/magicui/magic-card";
-import { Meteors } from "@/components/magicui/meteors";
-import { NumberTicker } from "@/components/magicui/number-ticker";
-import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -109,44 +105,36 @@ export default function Home() {
 
       <main>
         <section id="hero" className="relative flex min-h-screen items-center">
-          <div className="hero-grid absolute inset-0" />
-          <Meteors number={24} />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,49,49,0.25),transparent_50%),radial-gradient(circle_at_70%_70%,rgba(255,138,0,0.2),transparent_55%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,49,49,0.15),transparent_50%),radial-gradient(circle_at_70%_70%,rgba(255,138,0,0.1),transparent_55%)]" />
           <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-24 sm:px-6 lg:grid-cols-2 lg:items-center">
             <div className="relative z-10">
-              <p className="mb-4 text-sm uppercase tracking-[0.2em] text-zinc-500 dark:text-white/70">Portimao, Portugal</p>
-              <h1 className="font-heading text-5xl font-bold leading-[0.95] sm:text-6xl md:text-7xl">
-                <AnimatedGradientText>
-                  Portugal&apos;s Premier Sim Racing Experience
-                </AnimatedGradientText>
+              <p className="mb-4 text-sm uppercase tracking-[0.2em] text-zinc-500 dark:text-white/70">Portimão, Portugal</p>
+              <h1 className="font-heading text-5xl font-bold leading-[0.95] sm:text-6xl md:text-7xl text-[#FF3131]">
+                Portugal&apos;s Premier Sim Racing Experience
               </h1>
               <p className="mt-6 max-w-xl text-base text-zinc-700 dark:text-white/80 sm:text-lg">
                 Where Virtual Meets Reality. Professional racing simulators, elite hardware, and real driver feedback near Autodromo Internacional do Algarve.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
-                <ShimmerButton href="#contact">Book Now</ShimmerButton>
+                <Button asChild size="lg" className="bg-[#FF3131] text-white hover:bg-[#cc0000]">
+                  <Link href="#contact">Book Now</Link>
+                </Button>
                 <Button asChild variant="outline" size="lg">
                   <Link href="#simulators">Explore Rigs</Link>
                 </Button>
               </div>
               <div className="mt-10 flex flex-wrap gap-8">
                 <div>
-                  <p className="font-heading text-3xl font-bold text-[#FF3131]">
-                    <NumberTicker value={2} suffix="+" />
-                  </p>
+                  <p className="font-heading text-3xl font-bold text-[#FF3131]">2+</p>
                   <p className="text-sm text-zinc-500 dark:text-white/70">Professional Simulators</p>
                 </div>
                 <div>
-                  <p className="font-heading text-3xl font-bold text-[#FF3131]">
-                    <NumberTicker value={42} suffix={'"'} />
-                  </p>
+                  <p className="font-heading text-3xl font-bold text-[#FF3131]">42″</p>
                   <p className="text-sm text-zinc-500 dark:text-white/70">Triple OLED Display</p>
                 </div>
                 <div>
-                  <p className="font-heading text-3xl font-bold text-[#FF3131]">
-                    <NumberTicker value={5090} />
-                  </p>
-                  <p className="text-sm text-zinc-500 dark:text-white/70">RTX-Powered Rig</p>
+                  <p className="font-heading text-3xl font-bold text-[#FF3131]">RTX 5090</p>
+                  <p className="text-sm text-zinc-500 dark:text-white/70">GPU-Powered Rig</p>
                 </div>
               </div>
             </div>
