@@ -45,7 +45,7 @@ export default function GalleryPage() {
       </div>
 
       {/* Masonry-style grid */}
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 auto-rows-[220px]">
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 auto-rows-[320px]">
         {photos.map((p, i) => (
           <div
             key={i}
@@ -68,13 +68,13 @@ export default function GalleryPage() {
         <p className="text-zinc-500 dark:text-zinc-400 mb-8 max-w-2xl">
           Behind every great sim setup is real track experience. Founders Gábor and Jussi race competitively at Kartódromo Internacional do Algarve and on circuits across Europe.
         </p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           {[
             { src: "/assets/002-1-scaled-900x900-1.jpg", alt: "Karts at Kartódromo Internacional do Algarve" },
             { src: "/assets/005-1-scaled-900x900-1.jpg", alt: "Race car in garage — GT track day" },
             { src: "/assets/17-768x512-1.jpg",           alt: "Racing action on circuit" },
           ].map((p, i) => (
-            <div key={i} className="rounded-xl overflow-hidden aspect-[4/3]">
+            <div key={i} className="rounded-xl overflow-hidden aspect-[16/10]">
               <Image
                 src={bp(p.src)}
                 alt={p.alt}
