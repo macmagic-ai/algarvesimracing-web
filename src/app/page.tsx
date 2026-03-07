@@ -192,7 +192,7 @@ export default function Home() {
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             <MagicCard className="flex flex-col gap-4">
               <Image
-                src={bp("/assets/008-900x900-1.jpg")}
+                src={bp("/assets/11-1536x1152-1.jpg")}
                 alt="Algarve SimRacing Simulator 1 triple OLED setup"
                 width={900}
                 height={900}
@@ -210,7 +210,7 @@ export default function Home() {
             </MagicCard>
             <MagicCard className="flex flex-col gap-4">
               <Image
-                src={bp("/assets/005-1-scaled-900x900-1.jpg")}
+                src={bp("/assets/15.jpg")}
                 alt="Algarve SimRacing Simulator 2 ultrawide setup"
                 width={900}
                 height={900}
