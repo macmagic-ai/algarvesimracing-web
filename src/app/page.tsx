@@ -1,14 +1,12 @@
+"use client";
+
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { bp } from "@/lib/utils";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
-
-export const metadata: Metadata = {
-  title: "Portugal's Premier Sim Racing Experience",
-  description:
-    "Algarve SimRacing in Portimão — professional simulator rentals, coaching, private events and advanced driver prep near Autódromo Internacional do Algarve.",
-};
+import { ImageModal } from "@/components/image-modal";
+import { useState } from "react";
 
 const services = [
   {
@@ -41,7 +39,36 @@ const services = [
   },
 ];
 
+const stripPhotos = [
+  { img: "/assets/13-1024x714-1.jpg", alt: "McLaren wheel cockpit" },
+  { img: "/assets/12-1024x768-1.jpg", alt: "Driver in action" },
+  { img: "/assets/Gabor-and-Jussi-1-scaled-900x900-1.jpg", alt: "Founders Gábor and Jussi" },
+  { img: "/assets/002-1-scaled-900x900-1.jpg", alt: "Karting at the track" },
+  { img: "/assets/005-1-scaled-900x900-1.jpg", alt: "Race car at the circuit" },
+  { img: "/assets/17-768x512-1.jpg", alt: "Racing action" },
+];
+
 export default function HomePage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const openModal = (index: number) => {
+    setCurrentImageIndex(index);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % stripPhotos.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + stripPhotos.length) % stripPhotos.length);
+  };
+
   return (
     <div className="relative overflow-x-hidden">
 
@@ -151,23 +178,20 @@ export default function HomePage() {
       {/* ── Full-width photo strip ─────────────────────────── */}
       <section className="mx-auto w-full max-w-6xl px-4 sm:px-6 py-4">
         <div className="flex gap-3 overflow-x-auto scrollbar-none pb-2">
-          {[
-            { img: "/assets/13-1024x714-1.jpg", alt: "McLaren wheel cockpit" },
-            { img: "/assets/12-1024x768-1.jpg", alt: "Driver in action" },
-            { img: "/assets/Gabor-and-Jussi-1-scaled-900x900-1.jpg", alt: "Founders Gábor and Jussi" },
-            { img: "/assets/002-1-scaled-900x900-1.jpg", alt: "Karting at the track" },
-            { img: "/assets/005-1-scaled-900x900-1.jpg", alt: "Race car at the circuit" },
-            { img: "/assets/17-768x512-1.jpg", alt: "Racing action" },
-          ].map((p, i) => (
-            <div key={i} className="shrink-0 w-56 rounded-xl overflow-hidden aspect-[3/2]">
+          {stripPhotos.map((p, i) => (
+            <button
+              key={i}
+              onClick={() => openModal(i)}
+              className="shrink-0 w-56 rounded-xl overflow-hidden aspect-[3/2] cursor-pointer group"
+            >
               <Image
                 src={bp(p.img)}
                 alt={p.alt}
                 width={400}
                 height={267}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-            </div>
+            </button>
           ))}
         </div>
       </section>
@@ -218,6 +242,16 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Image Modal */}
+      <ImageModal
+        images={stripPhotos.map(p => ({ src: p.img, alt: p.alt }))}
+        currentIndex={currentImageIndex}
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        onNext={nextImage}
+        onPrev={prevImage}
+      />
     </div>
   );
 }

@@ -1,13 +1,12 @@
+"use client";
+
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Instagram } from "lucide-react";
 import { bp } from "@/lib/utils";
-
-export const metadata: Metadata = {
-  title: "Gallery",
-  description: "Photos from Algarve SimRacing — simulator rigs, cockpit views, and real motorsport action in Portimão.",
-};
+import { ImageModal } from "@/components/image-modal";
+import { useState } from "react";
 
 const photos = [
   { src: "/assets/008-900x900-1.jpg",              alt: "Simulator cockpit — immersive driver view",             w: 900, h: 900,  span: "col-span-2 row-span-2" },
@@ -22,7 +21,35 @@ const photos = [
   { src: "/assets/13-768x512-1.jpg",               alt: "Sim cockpit wide angle",                              w: 768, h: 512,  span: "" },
 ];
 
+const trackPhotos = [
+  { src: "/assets/002-1-scaled-900x900-1.jpg", alt: "Karts at Kartódromo Internacional do Algarve" },
+  { src: "/assets/005-1-scaled-900x900-1.jpg", alt: "Race car in garage — GT track day" },
+  { src: "/assets/17-768x512-1.jpg",           alt: "Racing action on circuit" },
+];
+
 export default function GalleryPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [modalImages, setModalImages] = useState<{ src: string; alt: string }[]>([]);
+
+  const openModal = (images: { src: string; alt: string }[], index: number) => {
+    setModalImages(images);
+    setCurrentImageIndex(index);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % modalImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + modalImages.length) % modalImages.length);
+  };
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
       {/* Header */}
@@ -47,18 +74,20 @@ export default function GalleryPage() {
       {/* Masonry-style grid */}
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 auto-rows-[320px]">
         {photos.map((p, i) => (
-          <div
+          <button
             key={i}
-            className={`relative overflow-hidden rounded-xl bg-zinc-100 dark:bg-white/5 ${p.span}`}
+            onClick={() => openModal(photos.map(photo => ({ src: photo.src, alt: photo.alt })), i)}
+            className={`relative overflow-hidden rounded-xl bg-zinc-100 dark:bg-white/5 ${p.span} cursor-pointer group`}
           >
             <Image
               src={bp(p.src)}
               alt={p.alt}
               fill
               sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-              className="object-cover hover:scale-105 transition-transform duration-500"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
             />
-          </div>
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
+          </button>
         ))}
       </div>
 
@@ -69,20 +98,20 @@ export default function GalleryPage() {
           Behind every great sim setup is real track experience. Founders Gábor and Jussi race competitively at Kartódromo Internacional do Algarve and on circuits across Europe.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-          {[
-            { src: "/assets/002-1-scaled-900x900-1.jpg", alt: "Karts at Kartódromo Internacional do Algarve" },
-            { src: "/assets/005-1-scaled-900x900-1.jpg", alt: "Race car in garage — GT track day" },
-            { src: "/assets/17-768x512-1.jpg",           alt: "Racing action on circuit" },
-          ].map((p, i) => (
-            <div key={i} className="rounded-xl overflow-hidden aspect-[16/10]">
+          {trackPhotos.map((p, i) => (
+            <button
+              key={i}
+              onClick={() => openModal(trackPhotos, i)}
+              className="rounded-xl overflow-hidden aspect-[16/10] cursor-pointer group"
+            >
               <Image
                 src={bp(p.src)}
                 alt={p.alt}
                 width={600}
                 height={450}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-            </div>
+            </button>
           ))}
         </div>
       </div>
@@ -97,6 +126,16 @@ export default function GalleryPage() {
           Book a Session →
         </Link>
       </div>
+
+      {/* Image Modal */}
+      <ImageModal
+        images={modalImages}
+        currentIndex={currentImageIndex}
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        onNext={nextImage}
+        onPrev={prevImage}
+      />
     </div>
   );
 }
