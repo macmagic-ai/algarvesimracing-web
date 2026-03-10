@@ -201,7 +201,7 @@ export default function HomePage() {
                 Elite Driver Coaching
               </h2>
               <p className="mt-3 text-zinc-600">
-                Professional racing driver & coach <strong className="text-zinc-900">Sérgio Sette Câmara</strong> (@sergiosettecamara) coaching his client in the Mercedes-AMG GT3 to prep for the Portimão race weekend. Consistency, clear references, clean lines.
+                Professional racing driver & coach <strong className="text-zinc-900">Sérgio Sette Câmara</strong> (@sergiosettecamara) coaching our co-founder <strong className="text-zinc-900">Gábor</strong> in the Mercedes-AMG GT3 to prep for the Portimão race weekend. Consistency, clear references, clean lines.
               </p>
               <div className="mt-5 flex flex-wrap items-center gap-3">
                 <Link

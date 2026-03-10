@@ -12,7 +12,7 @@ export const instagramPosts: IgPost[] = [
   {
     id: "1",
     image: "/assets/sette-camara-coaching.jpg",
-    caption: "Professional racing driver & coach Sérgio Sette Câmara @sergiosettecamara coaching his client in the Mercedes-AMG GT3 for the Portimão race weekend. Consistency, clear references, clean lines 🏁",
+    caption: "Professional racing driver & coach Sérgio Sette Câmara @sergiosettecamara coaching our co-founder Gábor in the Mercedes-AMG GT3 for the Portimão race weekend. Consistency, clear references, clean lines 🏁",
     date: "2025-03-10",
     url: "https://www.instagram.com/p/DUYQGXAjDvP/",
   },
