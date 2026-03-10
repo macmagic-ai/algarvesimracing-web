@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Rajdhani, Space_Grotesk } from "next/font/google";
+import PlausibleProvider from "next-plausible";
 
 import "./globals.css";
 import { Providers } from "@/components/providers";
@@ -18,8 +19,6 @@ const bodyFont = Space_Grotesk({
   subsets: ["latin"],
   display: "swap",
 });
-
-import Script from "next/script";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://macmagic-ai.github.io"),
@@ -81,10 +80,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <Script
-          defer
-          data-domain="algarvesimracing.com"
-          src="https://plausible-analytics-ce-production-c514.up.railway.app/js/script.outbound-links.js"
+        <PlausibleProvider
+          domain="algarvesimracing.com"
+          customDomain="https://plausible-analytics-ce-production-c514.up.railway.app"
+          trackOutboundLinks
         />
       </head>
       <body className={`${headingFont.variable} ${bodyFont.variable} antialiased`}>
