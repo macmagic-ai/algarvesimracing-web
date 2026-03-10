@@ -19,6 +19,8 @@ const bodyFont = Space_Grotesk({
   display: "swap",
 });
 
+import Script from "next/script";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://macmagic-ai.github.io"),
   title: {
@@ -78,6 +80,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <Script
+          defer
+          data-domain="algarvesimracing.com"
+          src="https://plausible-analytics-ce-production-c514.up.railway.app/js/script.outbound-links.js"
+        />
+      </head>
       <body className={`${headingFont.variable} ${bodyFont.variable} antialiased`}>
         <Providers>
           <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
