@@ -14,6 +14,14 @@ export const metadata: Metadata = {
 
 const proDrivers = [
   {
+    name: "Sérgio Sette Câmara",
+    title: "Pro Driver & Coach",
+    image: "/assets/sette-camara-coaching.jpg",
+    quote: "Coaching clients at Algarve SimRacing for race weekends at Portimão.",
+    series: "Mercedes-AMG GT3 Coaching",
+    hashtag: "#drivercoaching",
+  },
+  {
     name: "Noah Killion",
     title: "AU4 Champion",
     image: "/assets/noah-killion-algarve-simracing.png",
