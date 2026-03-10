@@ -21,7 +21,7 @@ const bodyFont = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://macmagic-ai.github.io"),
+  metadataBase: new URL("https://algarvesimracing.com"),
   title: {
     default: "Algarve SimRacing | Portugal's Premier Sim Racing Experience",
     template: "%s | Algarve SimRacing",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "Professional simulator rentals, coaching, streaming-ready rigs, events, and driver-focused training in Portimão.",
   applicationName: "Algarve SimRacing",
   alternates: {
-    canonical: "https://macmagic-ai.github.io/algarvesimracing-web",
+    canonical: "https://algarvesimracing.com",
   },
   keywords: [
     "Algarve SimRacing",
@@ -44,13 +44,13 @@ export const metadata: Metadata = {
     title: "Algarve SimRacing",
     description:
       "Where Virtual Meets Reality. Elite sim racing sessions, events, and coaching in Portimão.",
-    url: "https://macmagic-ai.github.io/algarvesimracing-web",
+    url: "https://algarvesimracing.com",
     siteName: "Algarve SimRacing",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/algarvesimracing-web/assets/008-900x900-1.jpg",
+        url: "/assets/008-900x900-1.jpg",
         width: 900,
         height: 900,
         alt: "Algarve SimRacing simulator setup",
@@ -62,13 +62,13 @@ export const metadata: Metadata = {
     title: "Algarve SimRacing",
     description:
       "Portugal's Premier Sim Racing Experience in Portimão. Book your session now.",
-    images: ["/algarvesimracing-web/assets/008-900x900-1.jpg"],
+    images: ["/assets/008-900x900-1.jpg"],
   },
   icons: {
     icon: [
-      { url: "/algarvesimracing-web/assets/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/assets/favicon-96x96.png", sizes: "96x96", type: "image/png" },
     ],
-    apple: "/algarvesimracing-web/assets/favicon-96x96.png",
+    apple: "/assets/favicon-96x96.png",
   },
 };
 

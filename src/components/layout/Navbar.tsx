@@ -8,12 +8,12 @@ import { Menu, X } from "lucide-react";
 import { bp } from "@/lib/utils";
 
 const links = [
-  { href: "/algarvesimracing-web/", label: "Home" },
-  { href: "/algarvesimracing-web/simulators", label: "Simulators" },
-  { href: "/algarvesimracing-web/pricing", label: "Pricing" },
-  { href: "/algarvesimracing-web/community", label: "Community" },
-  { href: "/algarvesimracing-web/about", label: "About" },
-  { href: "/algarvesimracing-web/contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/simulators", label: "Simulators" },
+  { href: "/pricing", label: "Pricing" },
+  { href: "/community", label: "Community" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Navbar() {
@@ -27,13 +27,13 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const isActive = (href: string) => pathname === href || (href !== "/algarvesimracing-web/" && pathname.startsWith(href));
+  const isActive = (href: string) => pathname === href || (href !== "/" && pathname.startsWith(href));
 
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? "border-b border-[var(--border-color)] bg-[var(--background)]/90 backdrop-blur-md shadow-sm" : "bg-transparent"}`}>
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
         {/* Logo */}
-        <Link href="/algarvesimracing-web/" className="flex items-center">
+        <Link href="/" className="flex items-center">
           <Image
             src={bp("/assets/ASR_branco-1.png")}
             alt="Algarve SimRacing"
@@ -73,7 +73,7 @@ export function Navbar() {
         {/* CTA + Hamburger */}
         <div className="flex items-center gap-3">
           <Link
-            href="/algarvesimracing-web/contact"
+            href="/contact"
             className="hidden sm:inline-flex items-center rounded-lg bg-[#FF3131] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#cc0000]"
           >
             Book Now
@@ -107,7 +107,7 @@ export function Navbar() {
             ))}
             <li>
               <Link
-                href="/algarvesimracing-web/contact"
+                href="/contact"
                 onClick={() => setOpen(false)}
                 className="inline-flex items-center rounded-lg bg-[#FF3131] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#cc0000]"
               >

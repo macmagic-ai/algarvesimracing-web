@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://macmagic-ai.github.io/algarvesimracing-web";
+  const base = "https://algarvesimracing.com";
   return [
     {
       url: base,

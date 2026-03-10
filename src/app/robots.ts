@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://macmagic-ai.github.io/algarvesimracing-web/sitemap.xml",
+    sitemap: "https://algarvesimracing.com/sitemap.xml",
   };
 }

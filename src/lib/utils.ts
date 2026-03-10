@@ -5,5 +5,5 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-/** Prepend the GitHub Pages basePath to any public/ asset path. */
-export const bp = (path: string) => `/algarvesimracing-web${path}`;
+/** Asset path helper - returns path as-is for root deployment. */
+export const bp = (path: string) => path;
