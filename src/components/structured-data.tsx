@@ -18,10 +18,10 @@ export function StructuredData() {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 37.138,
-      longitude: -8.537,
+      latitude: 37.1520056,
+      longitude: -8.5493578,
     },
-    hasMap: "https://maps.app.goo.gl/pLkunNYBOQVXgSao9",
+    hasMap: "https://www.google.com/maps/place/Algarve+SimRacing/@37.1520056,-8.5519327,1286m/data=!3m2!1e3!4b1!4m6!3m5!1s0xd1b298a91a1115b:0xd3aff11132632faa!8m2!3d37.1520056!4d-8.5493578!16s%2Fg%2F11xh8q8scr?entry=ttu&g_ep=EgoyMDI2MDMwOC4wIKXMDSoASAFQAw%3D%3D",
     priceRange: "€€",
     openingHoursSpecification: [
       {
