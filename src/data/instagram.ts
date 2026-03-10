@@ -11,6 +11,13 @@ export type IgPost = {
 export const instagramPosts: IgPost[] = [
   {
     id: "1",
+    image: "/assets/sette-camara-coaching.jpg",
+    caption: "Professional racing driver & coach Sérgio Sette Câmara @sergiosettecamara coaching his client in the Mercedes-AMG GT3 for the Portimão race weekend. Consistency, clear references, clean lines 🏁",
+    date: "2025-03-10",
+    url: "https://www.instagram.com/p/DUYQGXAjDvP/",
+  },
+  {
+    id: "2",
     image: "/assets/11-1536x1152-1.jpg",
     caption: "Simulator 1 ready for another session. Triple 42″ OLED, RTX 5090, Simucube 2 Pro. The ultimate sim racing setup in Portugal 🏎️",
     date: "2025-03-05",

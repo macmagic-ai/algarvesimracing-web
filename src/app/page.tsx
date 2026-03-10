@@ -175,6 +175,52 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Pro Coaching Highlight ─────────────────────────── */}
+      <section className="mx-auto w-full max-w-6xl px-4 sm:px-6 py-8">
+        <div className="rounded-2xl border border-zinc-200 bg-zinc-50 overflow-hidden">
+          <div className="grid md:grid-cols-2 gap-6 items-center">
+            <div className="aspect-[4/3] md:aspect-auto md:h-full overflow-hidden">
+              <Image
+                src={bp("/assets/sette-camara-coaching.jpg")}
+                alt="Sérgio Sette Câmara coaching at Algarve SimRacing"
+                width={600}
+                height={450}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-6 md:p-8">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="rounded-full bg-[#FF3131] px-3 py-1 text-xs font-semibold text-white uppercase tracking-wide">
+                  Pro Coaching
+                </span>
+                <span className="text-xs text-zinc-500 uppercase tracking-wide">
+                  Race Prep
+                </span>
+              </div>
+              <h2 className="font-heading text-2xl md:text-3xl font-bold text-zinc-900">
+                Elite Driver Coaching
+              </h2>
+              <p className="mt-3 text-zinc-600">
+                Professional racing driver & coach <strong className="text-zinc-900">Sérgio Sette Câmara</strong> (@sergiosettecamara) coaching his client in the Mercedes-AMG GT3 to prep for the Portimão race weekend. Consistency, clear references, clean lines.
+              </p>
+              <div className="mt-5 flex flex-wrap items-center gap-3">
+                <Link
+                  href="https://www.instagram.com/p/DUYQGXAjDvP/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center rounded-lg bg-[#FF3131] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#cc0000] transition-colors"
+                >
+                  View on Instagram
+                </Link>
+                <span className="text-xs text-zinc-500">
+                  #drivercoaching #telemetry #autodromodoalgarve
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── Pro Driver Highlight ─────────────────────────── */}
       <section className="mx-auto w-full max-w-6xl px-4 sm:px-6 py-8">
         <div className="rounded-2xl border border-zinc-200 bg-zinc-50 overflow-hidden">
