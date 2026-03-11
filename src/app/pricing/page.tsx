@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { contactDetails } from "@/data/site";
 
@@ -9,33 +8,6 @@ export const metadata: Metadata = {
   description:
     "View Algarve SimRacing packages, coaching add-ons, and send your booking request for sessions, events, or private training.",
 };
-
-const packages = [
-  {
-    name: "Standard",
-    price: "€99",
-    details: "2 hours total · 1 × 2h session · up to 2 persons on 1 simulator",
-    rate: "~€50/h",
-    featured: false,
-    badge: null,
-  },
-  {
-    name: "Intermediate",
-    price: "€160",
-    details: "4 hours total · 2 × 2h sessions · up to 2 persons on 1 simulator",
-    rate: "~€40/h",
-    featured: true,
-    badge: "Most Popular",
-  },
-  {
-    name: "Pro",
-    price: "€280",
-    details: "8 hours total · 4 × 2h sessions · up to 2 persons on 1 simulator",
-    rate: "~€35/h",
-    featured: false,
-    badge: "Best Value",
-  },
-];
 
 export default function PricingPage() {
   return (
@@ -47,75 +19,53 @@ export default function PricingPage() {
         Flexible plans for first-timers, regular drivers, and team events.
       </p>
 
-      {/* Pricing grid */}
-      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {packages.map((item) => (
-          <div
-            key={item.name}
-            className={`relative flex flex-col rounded-2xl border bg-white dark:bg-zinc-900 p-8 shadow-sm transition-shadow hover:shadow-md ${
-              item.featured
-                ? "border-[#FF3131] ring-2 ring-[#FF3131]/30"
-                : "border-zinc-200 dark:border-zinc-800"
-            }`}
-          >
-            {/* Badge */}
-            {item.badge && (
-              <span className="absolute -top-3 left-6 rounded-full bg-[#FF3131] px-3 py-0.5 text-xs font-bold uppercase tracking-wider text-white">
-                {item.badge}
-              </span>
-            )}
-
-            {/* Name */}
-            <h2 className="font-heading text-2xl font-bold text-[#FF3131]">{item.name}</h2>
-            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">{item.details}</p>
-
-            {/* Price */}
-            <div className="mt-6 flex items-end gap-1">
-              <span className="font-heading text-6xl font-bold leading-none text-zinc-900 dark:text-white">
-                {item.price}
+      {/* Single package — two-column layout on desktop */}
+      <div className="mt-10 flex flex-col gap-6 lg:flex-row lg:items-stretch">
+        {/* Price card */}
+        <div className="flex flex-col justify-between rounded-2xl border border-[#FF3131] bg-white dark:bg-zinc-900 p-8 ring-2 ring-[#FF3131]/20 shadow-sm lg:w-80 lg:shrink-0">
+          <div>
+            <h2 className="font-heading text-2xl font-bold text-[#FF3131]">Standard</h2>
+            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
+              2 hours total · 1 × 2h session · up to 2 persons on 1 simulator
+            </p>
+            <div className="mt-6">
+              <span className="font-heading text-7xl font-bold leading-none text-zinc-900 dark:text-white">
+                €99
               </span>
             </div>
             <p className="mt-2 text-sm font-medium text-zinc-500 dark:text-zinc-400">
-              Effective rate: {item.rate}
+              Effective rate: ~€50/h
             </p>
-
-            {/* CTA */}
-            <div className="mt-auto pt-8">
-              <a
-                href={contactDetails.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`block w-full rounded-full py-3 text-center text-sm font-bold transition hover:scale-105 active:scale-95 ${
-                  item.featured
-                    ? "bg-[#FF3131] text-white hover:bg-red-600"
-                    : "bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white hover:bg-zinc-200 dark:hover:bg-zinc-700"
-                }`}
-              >
-                Book Now
-              </a>
-            </div>
           </div>
-        ))}
-      </div>
+          <a
+            href={contactDetails.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 block w-full rounded-full bg-[#FF3131] py-3 text-center text-sm font-bold text-white transition hover:bg-red-600 hover:scale-105 active:scale-95"
+          >
+            Book Now
+          </a>
+        </div>
 
-      {/* Add-ons */}
-      <MagicCard className="mt-8">
-        <h2 className="font-heading text-2xl font-semibold text-[#FF3131]">Coaching & Pro Add-ons</h2>
-        <ul className="mt-4 space-y-3 text-sm text-zinc-700 dark:text-zinc-300">
-          <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-[#FF3131]">✦</span>
-            AI Coaching with real-time lap guidance — <strong>€15/hour</strong>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-[#FF3131]">✦</span>
-            Professional telemetry support for driver and engineer analysis
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-[#FF3131]">✦</span>
-            Human coaching available on request
-          </li>
-        </ul>
-      </MagicCard>
+        {/* Add-ons panel */}
+        <MagicCard className="flex-1">
+          <h2 className="font-heading text-2xl font-semibold text-[#FF3131]">Coaching & Pro Add-ons</h2>
+          <ul className="mt-4 space-y-4 text-sm text-zinc-700 dark:text-zinc-300">
+            <li className="flex items-start gap-3">
+              <span className="mt-0.5 text-[#FF3131] text-base">✦</span>
+              <span>AI Coaching with real-time lap guidance — <strong>€15/hour</strong></span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="mt-0.5 text-[#FF3131] text-base">✦</span>
+              <span>Professional telemetry support for driver and engineer analysis</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="mt-0.5 text-[#FF3131] text-base">✦</span>
+              <span>Human coaching available on request</span>
+            </li>
+          </ul>
+        </MagicCard>
+      </div>
 
       {/* Book CTA */}
       <section id="booking" className="mt-16 text-center">
