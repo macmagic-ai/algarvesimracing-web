@@ -89,7 +89,7 @@ export default function HomePage() {
               Experience
             </h1>
             <p className="mt-5 max-w-lg text-base text-zinc-600 sm:text-lg">
-              Where Virtual Meets Reality. Pro-grade simulators, elite hardware, and real driver coaching — 5 minutes from Autódromo Internacional do Algarve.
+              Where Virtual Meets Reality. Pro-grade simulators, elite hardware, and real driver coaching — 15 minutes from Autódromo Internacional do Algarve.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/pricing" className="rounded-lg bg-[#FF3131] px-6 py-3 text-sm font-semibold text-white hover:bg-[#cc0000] transition-colors">
@@ -104,8 +104,8 @@ export default function HomePage() {
               {[
                 { v: "2", l: "Pro simulators" },
                 { v: "RTX 5090", l: "GPU power" },
-                { v: "€50/h", l: "From (Pro package)" },
-                { v: "5 min", l: "From Autódromo" },
+                { v: "Half day", l: "Pro experience" },
+                { v: "15 min", l: "From Autódromo" },
               ].map((s) => (
                 <div key={s.v}>
                   <p className="font-heading text-xl font-bold text-[#FF3131]">{s.v}</p>
@@ -320,7 +320,7 @@ export default function HomePage() {
         <div className="rounded-2xl bg-[#FF3131] px-8 py-10 sm:px-12 text-white flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
           <div>
             <h2 className="font-heading text-2xl font-bold sm:text-3xl">Ready to race?</h2>
-            <p className="mt-1 text-white/80">Sessions from €49.50/h. No licence needed.</p>
+            <p className="mt-1 text-white/80">Half day private pro experience. No licence needed.</p>
           </div>
           <div className="flex gap-3 flex-wrap">
             <Link href="/pricing" className="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-[#FF3131] hover:bg-white/90 transition-colors">

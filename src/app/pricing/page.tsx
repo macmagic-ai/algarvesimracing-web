@@ -24,17 +24,17 @@ export default function PricingPage() {
         {/* Price card */}
         <div className="flex flex-col justify-between rounded-2xl border border-[#FF3131] bg-white dark:bg-zinc-900 p-8 ring-2 ring-[#FF3131]/20 shadow-sm lg:w-80 lg:shrink-0">
           <div>
-            <h2 className="font-heading text-2xl font-bold text-[#FF3131]">Standard</h2>
+            <h2 className="font-heading text-2xl font-bold text-[#FF3131]">Pro Experience</h2>
             <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
-              2 hours total · 1 × 2h session · up to 2 persons on 1 simulator
+              Half day · Professional high-end sim setup · Private session
             </p>
             <div className="mt-6">
               <span className="font-heading text-7xl font-bold leading-none text-zinc-900 dark:text-white">
-                €99
+                €500
               </span>
             </div>
             <p className="mt-2 text-sm font-medium text-zinc-500 dark:text-zinc-400">
-              Effective rate: ~€50/h
+              Premium pro-level experience
             </p>
           </div>
           <a

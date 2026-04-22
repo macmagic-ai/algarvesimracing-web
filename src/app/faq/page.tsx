@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     q: "Where are you located?",
-    a: "We're at Zona Industrial Coca Maravilhas Lote 15, 8500-483 Portimão — about 5 minutes from Autódromo Internacional do Algarve. Contact us and we'll send exact directions.",
+    a: "We're at Zona Industrial Coca Maravilhas Lote 15, 8500-483 Portimão — about 15 minutes from Autódromo Internacional do Algarve. Contact us and we'll send exact directions.",
   },
   {
     q: "Can I livestream my session?",
