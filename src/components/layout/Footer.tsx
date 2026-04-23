@@ -62,9 +62,9 @@ export function Footer() {
                 Zona Industrial Coca Maravilhas Lote 15,<br />8500-483 Portimão, Portugal
               </li>
               <li>
-                <a href="tel:+351965479298" className="flex items-center gap-2 text-sm text-zinc-500 hover:text-[#FF3131] transition-colors">
+                <a href="tel:+351915301376" className="flex items-center gap-2 text-sm text-zinc-500 hover:text-[#FF3131] transition-colors">
                   <Phone size={15} className="shrink-0 text-[#FF3131]" />
-                  +351 965 479 298
+                  +351 915 301 376
                 </a>
               </li>
               <li>

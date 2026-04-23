@@ -11,12 +11,12 @@ export const navLinks = [
 
 export const contactDetails = {
   address: "Zona Industrial Coca Maravilhas Lote 15, 8500-483 Portimão, Portugal",
-  phone: "+351 965 479 298",
-  phoneHref: "tel:+351965479298",
+  phone: "+351 915 301 376",
+  phoneHref: "tel:+351915301376",
   email: "info@algarvesimracing.com",
   emailHref: "mailto:info@algarvesimracing.com",
   instagram: "https://www.instagram.com/algarvesimracing/",
-  whatsapp: "https://wa.me/351965479298",
+  whatsapp: "https://wa.me/351915301376",
 };
 
 export const legalLinks = [

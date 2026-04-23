@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 
+import { contactDetails } from "@/data/site";
+
 const faqs = [
   {
     q: "Do I need any experience to use the simulators?",
@@ -95,7 +97,7 @@ export default function FaqPage() {
         <p className="mt-2 text-white/80">We&apos;re happy to help via WhatsApp or email.</p>
         <div className="mt-5 flex flex-wrap justify-center gap-3">
           <a
-            href="https://wa.me/351965479298"
+            href={contactDetails.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-lg bg-white px-6 py-2.5 text-sm font-semibold text-[#FF3131] hover:bg-white/90 transition-colors"
